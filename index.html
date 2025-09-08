@@ -249,8 +249,8 @@ print(result)</pre>
 
     <script>
         // API key and URL for Gemini API
-        const apiKey = 'AIzaSyB-rnfdcKyFKULuT69-XhjNJ4AAVhg01po';
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+        const apiKey = 'AIzaSyBXOGgPxnREYBzcU9jj-F5oZxl5oRz3YxM';
+        const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
        
         const codeEditor = document.getElementById('codeEditor');
         const inputData = document.getElementById('inputData');
@@ -444,7 +444,7 @@ int main() {
                             output: { type: "STRING" }
                         }
                     }
-                }
+                } 
             };
             
             let retries = 0;
@@ -453,7 +453,7 @@ int main() {
 
             while (retries < maxRetries) {
                 try {
-                    const response = await fetch(apiUrl, {
+                    const response = await fetch(API_URL, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(payload)
